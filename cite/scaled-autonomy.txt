@@ -1,0 +1,6 @@
+@article{scaledautonomy2019,
+  title={Scaled Autonomy: Enabling Human Operators to Control Robot Fleets},
+  author={Swamy, Gokul and Reddy, Siddharth and Levine, Sergey and Dragan, Anca D.},
+  journal={arXiv preprint arXiv:1910.02910},
+  year={2019}
+}

@@ -1,0 +1,6 @@
+@InProceedings{Reddy/etal/17b,
+  title={Accelerating Human Learning with Deep Reinforcement Learning},
+  author={Reddy, Siddharth and Levine, Sergey and Dragan, Anca},
+  year={2017},
+  url={https://siddharth.io/files/deep-tutor.pdf}
+}

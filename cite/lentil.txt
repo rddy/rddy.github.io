@@ -1,0 +1,7 @@
+@InProceedings{Reddy/etal/16c,
+  title={Latent Skill Embedding for Personalized Lesson Sequence Recommendation},
+  author={Reddy, Siddharth and Labutov, Igor and Joachims, Thorsten},
+  booktitle={Arxiv 1602.07029},
+  year={2016},
+  url={http://arxiv.org/abs/1602.07029}
+}

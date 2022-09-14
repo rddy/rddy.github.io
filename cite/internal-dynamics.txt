@@ -1,0 +1,7 @@
+@InProceedings{Reddy/etal/18b,
+  title={Where Do You Think You're Going?: Inferring Beliefs about Dynamics from Behavior},
+  author={Reddy, Siddharth and Dragan, Anca D. and Levine, Sergey},
+  booktitle={Arxiv 1805.08010},
+  year={2018},
+  url={https://arxiv.org/abs/1805.08010}
+}

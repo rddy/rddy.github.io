@@ -1,0 +1,6 @@
+@article{sqil2020,
+  title={{SQIL}: Imitation Learning via Reinforcement Learning with Sparse Rewards},
+  author={Reddy, Siddharth and Dragan, Anca D. and Levine, Sergey},
+  journal={arXiv preprint arXiv:1905.11108},
+  year={2019}
+}

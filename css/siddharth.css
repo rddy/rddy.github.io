@@ -1,0 +1,61 @@
+.header {
+  margin-top: 40px;
+}
+
+body {
+  font-family: Palatino;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h4 {
+  overflow: hidden;
+  text-align: center;
+}
+
+h4:before,
+h4:after {
+  background-color: D3D3D3;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h4:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h4:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color:  white;
+  }
+
+  a, a:link, a:visited, a:hover {
+    color:  orange;
+  }
+
+  .invert {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+}

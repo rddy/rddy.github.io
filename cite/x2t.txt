@@ -1,0 +1,8 @@
+@inproceedings{
+x2t2021,
+title={{X2T}: Training an X-to-Text Typing Interface with Online Learning from User Feedback},
+author={Jensen Gao and Siddharth Reddy and Glen Berseth and Nicholas Hardy and Nikhilesh Natraj and Karunesh Ganguly and Anca Dragan and Sergey Levine},
+booktitle={International Conference on Learning Representations},
+year={2021},
+url={https://openreview.net/forum?id=LiX3ECzDPHZ}
+}

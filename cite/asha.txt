@@ -1,0 +1,6 @@
+@article{asha2022,
+  title={{ASHA}: Assistive Teleoperation via Human-in-the-Loop Reinforcement Learning},
+  author={Chen, Sean and Gao, Jensen and Reddy, Siddharth and Berseth, Glen and Dragan, Anca D. and Levine, Sergey},
+  journal={arXiv preprint arXiv:2202.02465},
+  year={2022}
+}

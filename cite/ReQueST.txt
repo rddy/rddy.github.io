@@ -1,0 +1,6 @@
+@article{ReQueST,
+  title={Learning Human Objectives by Evaluating Hypothetical Behavior},
+  author={Reddy, Siddharth and Dragan, Anca D. and Levine, Sergey and Legg, Shane and Leike, Jan},
+  journal={arXiv preprint arXiv:1912.05652},
+  year={2019}
+}

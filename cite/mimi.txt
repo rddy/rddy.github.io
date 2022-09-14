@@ -1,0 +1,6 @@
+@article{mimi2022,
+  title={First Contact: Unsupervised Human-Machine Co-Adaptation via Mutual Information Maximization},
+  author={Reddy, Siddharth and Levine, Sergey and Dragan, Anca D.},
+  journal={arXiv preprint arXiv:2205.12381},
+  year={2022}
+}

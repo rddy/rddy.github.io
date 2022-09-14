@@ -1,0 +1,120 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sid Reddy</title>
+  <link rel="icon" href="images/goyadog.jpg">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/siddharth.css">
+</head>
+<body>
+<div class="container-fluid" style="max-width:700px; float: none; margin: 0 auto;">
+
+<div style="text-align: center;">
+  <h3 class="text-muted">Sid Reddy</h3>
+</div>
+
+<p>
+I'm an AI researcher working on adaptive human-machine interfaces that help people perceive and control their environment.
+You can reach me by email at <span id="email"></span> (<a href="files/pgp.txt">PGP</a>) or on Twitter <a href="https://twitter.com/sidgreddy">@sidgreddy</a>.
+</p>
+
+<h4 style="text-align:center">Papers</h4>
+<div id="papers"></div>
+
+<br>
+
+</div>
+
+</body>
+
+<footer>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+function rot13(str) {
+  var input     = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  var output    = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  var index     = x => input.indexOf(x);
+  var translate = x => index(x) > -1 ? output[index(x)] : x;
+  return str.split('').map(translate).join('');
+}
+var emailSpan = document.getElementById('email');
+var rotEmail = 'erqql@fvqqunegu.vb';
+emailSpan.innerHTML = rot13(rotEmail);
+
+var paperDiv = document.getElementById('papers');
+
+$.getJSON("papers.json", function(json) {
+
+  for (const paperData of json['papers']) {
+
+    var hr = document.createElement('hr');
+    hr.style = 'height:2px; visibility:hidden; margin-bottom:-15px';
+    paperDiv.appendChild(hr);
+
+    var row = document.createElement('div');
+    row.className = 'row';
+    row.style = 'display: flex; align-items: center;'
+
+    var imgSpan = document.createElement('div');
+    imgSpan.className = 'span3';
+    imgSpan.style = 'margin-left:  0%; margin-right: -2%;';
+
+    if ('thumbnails' in paperData) {
+      const thumbnails = paperData['thumbnails'];
+      const invertThumbnails = paperData['invert_thumbnails'];
+      for (let i=0; i<thumbnails.length; i++) {
+        var img = document.createElement('img');
+        if (invertThumbnails == null || invertThumbnails[i]) {
+          img.className = 'invert';
+        }
+        img.src = thumbnails[i];
+        img.style = 'width:100%';
+        imgSpan.appendChild(img);
+        imgSpan.appendChild(document.createElement('br'))
+      }
+    }
+
+    row.appendChild(imgSpan);
+
+    var infoSpan = document.createElement('div');
+    infoSpan.className = 'span10';
+
+    var title = document.createElement('strong');
+    title.innerHTML = paperData["title"];
+    infoSpan.appendChild(title);
+    infoSpan.appendChild(document.createElement('br'));
+
+    var keys = ['venue', 'authors'];
+    for (const key of keys) {
+      if (key in paperData) {
+        var tag = document.createElement('font');
+        tag.color = 'gray';
+        if (key == 'venue') {
+          tag.style = 'font-style: italic';
+        }
+        tag.innerHTML = paperData[key];
+        infoSpan.appendChild(tag);
+        infoSpan.appendChild(document.createElement('br'));
+      }
+    }
+
+    var tagKeys = ['pdf', 'openreview', 'arxiv', 'blog', 'website', 'video', 'code', 'citation'];
+    var tagKeyNames = ['PDF', 'OpenReview', 'arXiv', 'Blog', 'Website', 'Video', 'Code', 'BibTeX'];
+    for (let i=0; i<tagKeys.length; i++) {
+      if (tagKeys[i] in paperData) {
+        var a = document.createElement('a');
+        a.href = paperData[tagKeys[i]];
+        a.innerHTML = '[' + tagKeyNames[i] + '] ';
+        infoSpan.appendChild(a);
+      }
+    }
+
+    row.appendChild(infoSpan);
+    paperDiv.appendChild(row);
+  }
+
+});
+</script>
+</footer>
+
+</html>

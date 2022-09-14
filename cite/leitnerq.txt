@@ -1,0 +1,7 @@
+@InProceedings{Reddy/etal/16d,
+  title={Unbounded Human Learning: Optimal Scheduling for Spaced Repetition},
+  author={Reddy, Siddharth and Labutov, Igor and Banerjee, Siddhartha and Joachims, Thorsten},
+  booktitle={Arxiv 1602.07032},
+  year={2016},
+  url={http://arxiv.org/abs/1602.07032}
+}
